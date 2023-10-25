@@ -48,10 +48,10 @@ const previousImgBtn = document.querySelector(".gallery__previous");
 const nextImgBtn = document.querySelector(".gallery__next");
 let imgIndex = 1;
 const imgURLs = [
-    "../images/image-product-1.jpg",
-    "../images/image-product-2.jpg",
-    "../images/image-product-3.jpg",
-    "../images/image-product-4.jpg"
+    '../images/image-product-1.jpg',
+    '../images/image-product-2.jpg',
+    '../images/image-product-3.jpg',
+    '../images/image-product-4.jpg'
 ];
 
 nextImgBtn.addEventListener("click", () => {
