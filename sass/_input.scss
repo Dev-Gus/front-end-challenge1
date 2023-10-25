@@ -1,0 +1,36 @@
+@use 'variables' as v;
+
+.input{
+    height: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: v.$Light-grayish-blue;
+
+    &__minus{
+        width: 30px;
+        height: 100%;
+        padding: 24px 5px;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.4;
+        }
+    }
+
+    &__number{
+        width: 100%;
+        border: none;
+        font-size: 1.2em;
+        font-weight: 700;
+        font-family: v.$Font;
+        text-align: center;
+        outline: none;
+        background-color: v.$Light-grayish-blue;
+    }
+
+    &__plus{
+        @extend .input__minus;
+        padding: 18px 4px;
+    }
+}
