@@ -148,7 +148,7 @@ body {
 .gallery__img-container {
   height: 300px;
   width: 100%;
-  background-image: url("./images/image-product-1.jpg");
+  background-image: url("images/image-product-1.jpg");
   background-size: cover;
   background-position-y: -35px;
 }
@@ -418,14 +418,14 @@ body {
 }
 .modal-gallery__close:hover {
   cursor: pointer;
-  content: url("./images/icon-close-orange.svg");
+  content: url("images/icon-close-orange.svg");
 }
 .modal-gallery__img-container {
   height: 446px;
   border-radius: 1rem;
   margin-bottom: 2rem;
   position: relative;
-  background-image: url("./images/image-product-1.jpg");
+  background-image: url("images/image-product-1.jpg");
   background-size: cover;
 }
 .modal-gallery__thumbnails {

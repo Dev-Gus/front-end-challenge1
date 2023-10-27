@@ -53,12 +53,6 @@ const imgContainer = document.querySelector(".gallery__img-container");
 const previousImgBtn = document.querySelector(".gallery__previous");
 const nextImgBtn = document.querySelector(".gallery__next");
 let imgIndex = 1;
-const imgURLs = [
-    "images/image-product-1.jpg",
-    "images/image-product-2.jpg",
-    "images/image-product-3.jpg",
-    "images/image-product-4.jpg"
-];
 
 nextImgBtn.addEventListener("click", () => {
     changeNextImg(imgContainer);
@@ -95,7 +89,7 @@ thumbnails = [...thumbnails];
 
 thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener("click", event => {
-        imgContainer.style.backgroundImage = `url("./images/image-product-${event.target.id}.jpg")`;
+        imgContainer.style.backgroundImage = `url("images/image-product-${event.target.id}.jpg")`;
     })
 })
 
@@ -103,7 +97,7 @@ let modalThumbnails = document.querySelectorAll(".modal-gallery__thumbnail");
 modalThumbnails = [...modalThumbnails];
 modalThumbnails.forEach(modalThumbnail => {
     modalThumbnail.addEventListener("click", event => {
-        modalImgContainer.style.backgroundImage = `url("./images/image-product-${event.target.id.slice(-1)}.jpg")`;
+        modalImgContainer.style.backgroundImage = `url("images/image-product-${event.target.id.slice(-1)}.jpg")`;
     })
 })
 
@@ -169,11 +163,11 @@ function drawProductInModal() {
 function changeNextImg(imgContainer) {
     if (imgIndex === 4) imgIndex = 4;
     else imgIndex++;
-    imgContainer.style.backgroundImage = `url("../images/image-product-${imgIndex}.jpg")`;
+    imgContainer.style.backgroundImage = `url("images/image-product-${imgIndex}.jpg")`;
 }
 
 function changePreviousImg(imgContainer) {
     if (imgIndex === 1) imgIndex = 1;
     else imgIndex--;
-    imgContainer.style.backgroundImage = `url("../images/image-product-${imgIndex}.jpg")`;
+    imgContainer.style.backgroundImage = `url("images/image-product-${imgIndex}.jpg")`;
 }

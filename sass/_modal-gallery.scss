@@ -19,7 +19,7 @@
         width: 1rem;
         &:hover{
             cursor: pointer;
-            content: url(../images/icon-close-orange.svg);
+            content: url("images/icon-close-orange.svg");
         }
     }
 
@@ -30,7 +30,7 @@
         position: relative;
 
         background: {
-            image: url('../images/image-product-1.jpg');
+            image: url("images/image-product-1.jpg");
             size: cover;
         }
     }
