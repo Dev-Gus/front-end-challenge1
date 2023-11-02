@@ -35,17 +35,28 @@ addToCartBtn.addEventListener("click", () => {
 
 
 const cartIconBtn = document.querySelector(".header__cart");
+const cartImg = document.querySelector(".header__cart-img");
 const cartModal = document.querySelector(".cart-modal");
 const productContainer = document.querySelector(".cart-modal__checkout-container");
+let cartIconColor = true;
+
 
 cartIconBtn.addEventListener("click", () => {
     cartModal.classList.toggle("show");
+
+    if (cartIconColor) {
+        cartImg.src = "./images/icon-cart-black.svg";
+        cartIconColor = false;
+    } else {
+        cartImg.src = "./images/icon-cart.svg";
+        cartIconColor = true;
+    }
+    
 
     if (lastValue === 0) {
         productContainer.innerHTML = "<p class='cart-empty'>Your cart is empty</p>";
     }
 })
-
 
 /////Gallery
 
