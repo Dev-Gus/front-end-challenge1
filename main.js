@@ -1,4 +1,4 @@
-///// Input de compra
+///// Buy Input
 
 let minusBtn = document.querySelector(".input__minus");
 let plusBtn = document.querySelector(".input__plus");
@@ -51,7 +51,7 @@ cartIconBtn.addEventListener("click", () => {
         cartImg.src = "./images/icon-cart.svg";
         cartIconColor = true;
     }
-    
+
 
     if (lastValue === 0) {
         productContainer.innerHTML = "<p class='cart-empty'>Your cart is empty</p>";
@@ -89,6 +89,13 @@ const modalImgContainer = document.querySelector(".modal-gallery__img-container"
 const imgModal = document.querySelector(".modal-gallery__bg");
 const closeModalBtn = document.querySelector(".modal-gallery__close");
 const originalOverFlow = document.body.style.overflow;
+
+imgModal.addEventListener("click", (event) => {
+    if (event.target === imgModal) {
+        imgModal.style.display = "none";
+        document.body.style.overflow = originalOverFlow;
+    }
+});
 
 closeModalBtn.addEventListener("click", () => {
     imgModal.style.display = "none";
