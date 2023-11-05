@@ -103,6 +103,7 @@ body {
   padding-top: 42px;
 }
 .navbar__link:hover {
+  font-weight: 700;
   border-bottom: 4px solid hsl(26, 100%, 55%);
 }
 @media (min-width: 1115px) {

@@ -26,11 +26,13 @@ let cartNotification = document.querySelector(".header__cart--notification");
 let lastValue = parseInt(cartNotification.textContent);
 
 addToCartBtn.addEventListener("click", () => {
-    lastValue = lastValue + userInputNumber;
+    if (userInputNumber > 0) {
+        lastValue = lastValue + userInputNumber;
 
-    cartNotification.textContent = lastValue;
-    cartNotification.style.display = "block";
-    drawProductInModal();
+        cartNotification.textContent = lastValue;
+        cartNotification.style.display = "block";
+        drawProductInModal();
+    }
 });
 
 
@@ -139,11 +141,17 @@ const closeMenuBtn = document.querySelector(".modal-navbar__close-icon");
 const menuModal = document.querySelector(".modal-navbar__bg");
 
 menuBtn.addEventListener("click", () => {
+    menuModal.classList.remove("animate__fadeOutLeft");
+    menuModal.classList.add("animate__fadeInLeft");
     menuModal.classList.toggle("show");
 })
 
 closeMenuBtn.addEventListener("click", () => {
-    menuModal.classList.toggle("show");
+    menuModal.classList.remove("animate__fadeInLeft");
+    menuModal.classList.add("animate__fadeOutLeft");
+    setTimeout(() => {
+        menuModal.classList.toggle("show");
+    }, 700);
 })
 
 

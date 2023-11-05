@@ -1,16 +1,17 @@
 @use 'variables';
 @use 'mixins';
 
-.modal-navbar{
+.modal-navbar {
     background: variables.$White;
     width: 250px;
     padding: 28px 24px;
-    height: 100%;    
-    &__bg{
+    height: 100%;
+
+    &__bg {
         @include mixins.modal-bg;
     }
 
-    &__items{
+    &__items {
         display: flex;
         flex-direction: column;
         height: 200px;
@@ -19,14 +20,14 @@
         margin-top: 3rem;
     }
 
-    &__link{
+    &__link {
         text-decoration: none;
         color: variables.$Very-dark-blue;
         font-weight: 700;
         font-size: 1.1em;
     }
 
-    &__close-icon:hover{
+    &__close-icon:hover {
         cursor: pointer;
     }
 }
